@@ -74,6 +74,31 @@
         }
       }
     },
+    "/analysis/metricprovidersByCategory": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retieve the list of the metric providers by category",
+        "operationId": "getMetricProvidersByCategory",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricProvidersByCategory"
+            }
+          },
+          "404": {
+            "description": "MetricProviders not found"
+          }
+        }
+      }
+    },
     "/analysis/task": {
       "get": {
         "tags": [
@@ -1876,6 +1901,743 @@
             },
             "xml": {
               "name": "AnalysisTask"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "MetricProvider"
+      }
+    },
+    "MetricProvidersByCategory": {
+      "type": "object",
+      "properties": {
+        "Factoids": {
+          "type": "object",
+          "properties": {
+            "Newsgroups and Forums": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Bug Trackers": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Documentation": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            }
+          }
+        },
+        "Transient Metric Providers": {
+          "type": "object",
+          "properties": {
+            "Newsgroups and Forums": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Puppet Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Bug Trackers": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Documentation": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Natural Language Processing": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Puppet Smells": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Java Code": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Puppet Antipatterns": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "New Versions": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Maven Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Projects Relations": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "OSGi Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Docker Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "API": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Docker Antipatterns": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Commits and Committers": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Docker Smells": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Generic Source Code": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Indexing": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            }
+          }
+        },
+        "Historic Metric Providers": {
+          "type": "object",
+          "properties": {
+            "Newsgroups and Forums": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Maven Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Puppet Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Bug Trackers": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Documentation": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Puppet Smells": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "OSGi Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Java Code": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Docker Dependencies": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Commits and Committers": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Docker Smells": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
+            },
+            "Generic Source Code": {
+              "type": "array",
+              "items": {
+                "minItems": 1,
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "metricProviderId": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "AnalysisTask"
+                }
+              }
             }
           }
         }
