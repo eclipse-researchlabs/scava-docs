@@ -68,20 +68,23 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 * **Configure the Target Platform**
 
 Open the Eclipse preferences (`Window -> Preferences`), then choose the Target Platform (`Plug-in Development -> Target Platform`).<br/>
-<img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
+
+![eclipse_preferences_1](./images/eclipse_preferences_1.png)
 Figure-01: Eclipse Preferences.
 
 Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).<br/>
-<img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
+
+![eclipse_target_platform_2](./images/eclipse_target_platform_2.png)
 Figure-02: Eclipse Target Platforms Initialization.
 
 Give a name to the new target platform, Click on (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (`Finish`).<br/>
-<img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
+
+![eclipse_target_platform_3](./images/eclipse_target_platform_3.png)
 Figure-03: Eclipse Target Platforms Dependencies.
 
 Finally, check the new target configuration, then click on (`Apply and Close`) to save the changes.<br/>
-<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
 
+![eclipse_target_platform_4](./images/eclipse_target_platform_4.png)
 Figure-04: Eclipse Target Platforms.
 
 #### Import Projects into the Eclipse Workspace
@@ -90,9 +93,8 @@ Open Eclipse and import all projects from the top level directory of the Scava c
 
 Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
 [Tycho Plugin](https://www.eclipse.org/tycho/).
-<br/>
-<img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
 
+![m2e-connectors](./images/m2e-connectors.png)
 Figure-05: Install m2e-connectors plugins.
 
 ### Configure the Analysis Platform
@@ -159,7 +161,6 @@ When starting the platform, you can pass a configuration file to control the beh
 In case that the previous steps doesn't launch your RCP application (mainly due to a runtime missing dependencies), the "Add Required Plug-ins" option allows you to validate (i.e. select only the right amount of plugins you actually need) your runtime configuration.
 To do so, go to `Run menu` and select `Run Configurations...`. 
 From the list of the left hand side, select the run configuration for your Eclipse application, then choose `Plug-ins` tab at the right dialog box. To resolve the runtime dependencies effectively required to run the RCP application, click on `Add Required Plug-ins` button the `Apply` to save the changes and re-run your configuration.
-<br/>
 
-<img src="images/add-required-plugins.png" height="500px" width="750px"><br/>
+![add-required-plugins](./images/add-required-plugins.png)
 Figure-06: Add Required Plug-ins configuration.

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Analysis platform - Eclipse Scava</title>
+  <title>Home - Eclipse Scava</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Analysis platform";
-    var mkdocs_page_input_path = "developers-guide/runing-from-sources/analysis-platform.md";
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "developers-guide/runing-from-sources/analysis-platform/index.md";
     var mkdocs_page_url = "/developers-guide/runing-from-sources/analysis-platform/";
   </script>
   
@@ -203,28 +203,6 @@
                     
     <a class="" href="../administration-application/">Administration application</a>
                 </li>
-                <li class="toctree-l3 current">
-                    
-    <a class="current" href="./">Analysis platform</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l4"><a href="#running-the-analysis-platform-form-sources">Running the Analysis Platform form Sources</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l5" href="#prerequisite">Prerequisite</a></li>
-        
-            <li><a class="toctree-l5" href="#get-the-code">Get the Code</a></li>
-        
-            <li><a class="toctree-l5" href="#configuration">Configuration</a></li>
-        
-            <li><a class="toctree-l5" href="#run-the-analysis-platform">Run the Analysis Platform</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
                 <li class="toctree-l3">
                     
     <a class="" href="../eclipse-plugin/">Eclipse plugin</a>
@@ -236,6 +214,34 @@
                 <li class="toctree-l3">
                     
     <a class="" href="../visualisation-dashboard/">Visualisation dashboard</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <span class="caption-text">Analysis platform</span>
+    <ul class="subnav">
+                <li class="toctree-l4 current">
+                    
+    <a class="current" href="./">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l5"><a href="#running-the-analysis-platform-form-sources">Running the Analysis Platform form Sources</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#prerequisite">Prerequisite</a></li>
+        
+            <li><a class="toctree-l6" href="#get-the-code">Get the Code</a></li>
+        
+            <li><a class="toctree-l6" href="#configuration">Configuration</a></li>
+        
+            <li><a class="toctree-l6" href="#run-the-analysis-platform">Run the Analysis Platform</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
                 </li>
     </ul>
                 </li>
@@ -557,15 +563,15 @@
     
       
         
-          <li>Developers guide &raquo;</li>
-        
-      
-        
           <li>Runing from sources &raquo;</li>
         
       
+        
+          <li>Analysis platform &raquo;</li>
+        
+      
     
-    <li>Analysis platform</li>
+    <li>Home</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -583,7 +589,7 @@
 <h3 id="install-eclipseide">Install EclipseIDE</h3>
 <p>Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Mars.2 with plug-in development support (Eclipse IDE for RCP Developers package).</p>
 <h2 id="get-the-code">Get the Code</h2>
-<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/#source-code-repository">Development Guidelines</a>.</p>
+<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository">Development Guidelines</a>.</p>
 <p>If you are using <strong>Linux / OS X</strong>:</p>
 <pre><code class="Shell">git clone https://github.com/eclipse-researchlabs/scava.git scava
 cd scava
@@ -630,25 +636,24 @@ git checkout dev
 <p><strong>Configure the Target Platform</strong></p>
 </li>
 </ol>
-<p>Open the Eclipse preferences (<code>Window -&gt; Preferences</code>), then choose the Target Platform (<code>Plug-in Development -&gt; Target Platform</code>).<br/>
-<img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
+<p>Open the Eclipse preferences (<code>Window -&gt; Preferences</code>), then choose the Target Platform (<code>Plug-in Development -&gt; Target Platform</code>).<br/></p>
+<p><img alt="eclipse_preferences_1" src="./images/eclipse_preferences_1.png" />
 Figure-01: Eclipse Preferences.</p>
-<p>Add a new Target Platform configuration for the project, choose the Default initialization then click on (<code>Next</code>).<br/>
-<img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
+<p>Add a new Target Platform configuration for the project, choose the Default initialization then click on (<code>Next</code>).<br/></p>
+<p><img alt="eclipse_target_platform_2" src="./images/eclipse_target_platform_2.png" />
 Figure-02: Eclipse Target Platforms Initialization.</p>
-<p>Give a name to the new target platform, Click on (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/>
-<img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
+<p>Give a name to the new target platform, Click on (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/></p>
+<p><img alt="eclipse_target_platform_3" src="./images/eclipse_target_platform_3.png" />
 Figure-03: Eclipse Target Platforms Dependencies.</p>
-<p>Finally, check the new target configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/>
-<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/></p>
-<p>Figure-04: Eclipse Target Platforms.</p>
+<p>Finally, check the new target configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/></p>
+<p><img alt="eclipse_target_platform_4" src="./images/eclipse_target_platform_4.png" />
+Figure-04: Eclipse Target Platforms.</p>
 <h4 id="import-projects-into-the-eclipse-workspace">Import Projects into the Eclipse Workspace</h4>
 <p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
 <p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
-<a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.
-<br/>
-<img src="images/m2e-connectors.png" height="500px" width="500px"><br/></p>
-<p>Figure-05: Install m2e-connectors plugins.</p>
+<a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.</p>
+<p><img alt="m2e-connectors" src="./images/m2e-connectors.png" />
+Figure-05: Install m2e-connectors plugins.</p>
 <h3 id="configure-the-analysis-platform">Configure the Analysis Platform</h3>
 <h4 id="identifieryour-name"><code>identifier=&lt;your name&gt;</code></h4>
 <p>The identifier of the node. If not specified, the platform will attempt to use the node's hostname, and if it cannot resolve the hostname, it will generated a random UUID. </p>
@@ -692,9 +697,8 @@ Figure-03: Eclipse Target Platforms Dependencies.</p>
 <h3 id="workaround-to-manage-the-runtime-missing-dependencies">Workaround to manage the runtime missing dependencies</h3>
 <p>In case that the previous steps doesn't launch your RCP application (mainly due to a runtime missing dependencies), the "Add Required Plug-ins" option allows you to validate (i.e. select only the right amount of plugins you actually need) your runtime configuration.
 To do so, go to <code>Run menu</code> and select <code>Run Configurations...</code>. 
-From the list of the left hand side, select the run configuration for your Eclipse application, then choose <code>Plug-ins</code> tab at the right dialog box. To resolve the runtime dependencies effectively required to run the RCP application, click on <code>Add Required Plug-ins</code> button the <code>Apply</code> to save the changes and re-run your configuration.
-<br/></p>
-<p><img src="images/add-required-plugins.png" height="500px" width="750px"><br/>
+From the list of the left hand side, select the run configuration for your Eclipse application, then choose <code>Plug-ins</code> tab at the right dialog box. To resolve the runtime dependencies effectively required to run the RCP application, click on <code>Add Required Plug-ins</code> button the <code>Apply</code> to save the changes and re-run your configuration.</p>
+<p><img alt="add-required-plugins" src="./images/add-required-plugins.png" />
 Figure-06: Add Required Plug-ins configuration.</p>
               
             </div>
@@ -703,10 +707,10 @@ Figure-06: Add Required Plug-ins configuration.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../eclipse-plugin/" class="btn btn-neutral float-right" title="Eclipse plugin">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../installation-guide/database-backup/" class="btn btn-neutral float-right" title="Database backup">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../administration-application/" class="btn btn-neutral" title="Administration application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visualisation-dashboard/" class="btn btn-neutral" title="Visualisation dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -732,10 +736,10 @@ Figure-06: Add Required Plug-ins configuration.</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../administration-application/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../visualisation-dashboard/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../eclipse-plugin/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../installation-guide/database-backup/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
