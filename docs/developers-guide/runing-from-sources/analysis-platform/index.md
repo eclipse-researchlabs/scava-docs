@@ -70,6 +70,7 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 Open the Eclipse preferences (`Window -> Preferences`), then choose the Target Platform (`Plug-in Development -> Target Platform`).<br/>
 
 ![eclipse_preferences_1](./images/eclipse_preferences_1.png =500x500)
+<img src="images/eclipse_preferences_1.png" height="500px" width="500px" />
 
 Figure-01: Eclipse Preferences.
 
