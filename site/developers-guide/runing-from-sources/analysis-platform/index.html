@@ -220,10 +220,6 @@
         
             <li><a class="toctree-l5" href="#run-the-analysis-platform">Run the Analysis Platform</a></li>
         
-            <li><a class="toctree-l5" href="#run-the-api-gateway">Run the api-gateway</a></li>
-        
-            <li><a class="toctree-l5" href="#run-the-authentication-service">Run the authentication service</a></li>
-        
         </ul>
     
 
@@ -585,11 +581,11 @@
 <h3 id="install-mongodb">Install MongoDB</h3>
 <p>You can download MongoDB from the <a href="http://www.mongodb.org/downloads">MongoDb website</a>.</p>
 <h3 id="install-eclipseide">Install EclipseIDE</h3>
-<p>Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).</p>
+<p>Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Mars.2 with plug-in development support (Eclipse IDE for RCP Developers package).</p>
 <h2 id="get-the-code">Get the Code</h2>
-<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/#source-code-repository">Development Guidelines</a>:</p>
+<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/#source-code-repository">Development Guidelines</a>.</p>
 <p>If you are using <strong>Linux / OS X</strong>:</p>
-<pre><code class="Shell">git clone https://github.com/crossminer/scava.git scava
+<pre><code class="Shell">git clone https://github.com/eclipse-researchlabs/scava.git scava
 cd scava
 git checkout dev
 </code></pre>
@@ -599,26 +595,19 @@ git checkout dev
 cd scava
 git init
 git config core.longpaths true
-git add remote origin https://github.com/crossminer/scava.git
+git add remote origin https://github.com/eclipse-researchlabs/scava.git
 git fetch
 git checkout dev
 </code></pre>
 
 <h2 id="configuration">Configuration</h2>
 <h3 id="configure-the-eclipse-ide">Configure The Eclipse IDE</h3>
-<h4 id="import-projects-into-eclipse-workspace">Import Projects into Eclipse Workspace</h4>
-<p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
-<p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
-<a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.
-<br/>
-<img src="images/m2e-connectors.png" height="500px" width="500px"><br/></p>
-<p>Figure-01: Install m2e-connectors plugins.</p>
 <h4 id="configure-the-target-platform">Configure the Target Platform</h4>
 <p>The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.</p>
 <ul>
-<li><strong>Download Eclipse Mars platform</strong>
-Download the compleate Eclipse Mars platform.</li>
+<li><strong>Download Eclipse Mars platform</strong></li>
 </ul>
+<p>Download the complete Eclipse Mars platform.</p>
 <p>In command ligne :</p>
 <pre><code class="Shell">./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
 </code></pre>
@@ -626,33 +615,40 @@ Download the compleate Eclipse Mars platform.</li>
 <pre><code class="Shell">./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
 </code></pre>
 
-<p>Then, extract the its context somewehere on your machine.</p>
+<p>Then, extract its context somewehere on your machine.</p>
 <ul>
 <li><strong>Download Rascal dependencies</strong></li>
 </ul>
-<p>Download two external libraries required to run metrics providers based on Rascal.</p>
+<p>Download two external libraries required to run the metric providers based on Rascal.</p>
 <p>Repository URL : <a href="https://update.rascal-mpl.org/unstable/plugins/">Rascal Dependencies</a></p>
 <ol>
 <li>impulse_0.3.0.xxx.jar</li>
 <li>
-<p>rascal_eclipse_0.12.0.xxx.jar</p>
+<p>rascal_eclipse_0.1x.x.xxx.jar</p>
 </li>
 <li>
 <p><strong>Configure the Target Platform</strong></p>
 </li>
 </ol>
-<p>Open the Eclipse preferences on (<code>Window -&gt; Preferencies</code>), then choose the Target Platform Definition (<code>Plug-in Development -&gt; Target Platform</code>).<br/>
+<p>Open the Eclipse preferences (<code>Window -&gt; Preferences</code>), then choose the Target Platform (<code>Plug-in Development -&gt; Target Platform</code>).<br/>
 <img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
-Figure-02: Eclipse Preferences.</p>
+Figure-01: Eclipse Preferences.</p>
 <p>Add a new Target Platform configuration for the project, choose the Default initialization then click on (<code>Next</code>).<br/>
 <img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
-Figure-03: Eclipse Target Platforms Initialization.</p>
-<p>Give a name to the new target platform, hit the (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/>
+Figure-02: Eclipse Target Platforms Initialization.</p>
+<p>Give a name to the new target platform, Click on (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/>
 <img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
-Figure-04: Eclipse Target Platforms Dependencies.</p>
-<p>Finally, check the new target Configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/>
+Figure-03: Eclipse Target Platforms Dependencies.</p>
+<p>Finally, check the new target configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/>
 <img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/></p>
-<p>Figure-05: Eclipse Target Platforms.</p>
+<p>Figure-04: Eclipse Target Platforms.</p>
+<h4 id="import-projects-into-the-eclipse-workspace">Import Projects into the Eclipse Workspace</h4>
+<p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
+<p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
+<a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.
+<br/>
+<img src="images/m2e-connectors.png" height="500px" width="500px"><br/></p>
+<p>Figure-05: Install m2e-connectors plugins.</p>
 <h3 id="configure-the-analysis-platform">Configure the Analysis Platform</h3>
 <h4 id="identifieryour-name"><code>identifier=&lt;your name&gt;</code></h4>
 <p>The identifier of the node. If not specified, the platform will attempt to use the node's hostname, and if it cannot resolve the hostname, it will generated a random UUID. </p>
@@ -680,18 +676,6 @@ Figure-04: Eclipse Target Platforms Dependencies.</p>
 <pre><code class="Shell">sudo service mongod start
 </code></pre>
 
-<h2 id="run-the-api-gateway">Run the api-gateway</h2>
-<ul>
-<li>Right click on
-<code>scava-api-gateway/src/main/java/org.eclipse.scava.apigateway/ApiGatewayApplication.java</code></li>
-<li>Then click on Run As -&gt; Java Application</li>
-</ul>
-<h2 id="run-the-authentication-service">Run the authentication service</h2>
-<ul>
-<li>Right click on
-<code>scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java</code></li>
-<li>Then click on Run As -&gt; Java Application</li>
-</ul>
 <h3 id="validate-and-run-the-platform">Validate and Run the Platform</h3>
 <p>Open <code>releng/org.eclipse.scava.product/scava.product</code>
   * Click the <code>Validate...</code> icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
@@ -704,6 +688,12 @@ Figure-04: Eclipse Target Platforms Dependencies.</p>
 <p>When starting the platform, you can pass a configuration file to control the behaviour of the platform:</p>
 <pre><code class="Shell">./eclipse -worker ${id-worker} -config myconfiguration.properties
 </code></pre>
+
+<p>In case that the previous steps doesn't launch your RCP application (mainly due to a runtime missing dependencies), the "Add Required Plug-ins" option allows you to validate (i.e. select only the right amount of plugins you actually need) your runtime configuration.
+To do so, 
+<br/>
+<img src="images/add-required-plugins.png" height="500px" width="750px"><br/>
+Figure-06: Add Required Plug-ins.</p>
               
             </div>
           </div>
