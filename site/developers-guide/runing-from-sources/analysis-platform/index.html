@@ -637,23 +637,18 @@ git checkout dev
 </li>
 </ol>
 <p>Open the Eclipse preferences (<code>Window -&gt; Preferences</code>), then choose the Target Platform (<code>Plug-in Development -&gt; Target Platform</code>).<br/></p>
-<p><img src="/images/eclipse_preferences_1.png" height="500px" width="500px" /></p>
-<p>Figure-01: Eclipse Preferences.</p>
+<p><img src="./images/eclipse_preferences_1.png" height="500px" width="500px" /></p>
 <p>Add a new Target Platform configuration for the project, choose the Default initialization then click on (<code>Next</code>).<br/></p>
-<p>![eclipse_target_platform_2](./images/eclipse_target_platform_2.png =500x500)</p>
-<p>Figure-02: Eclipse Target Platforms Initialization.</p>
+<p><img src="./images/eclipse_target_platform_2.png" height="500px" width="500px" /></p>
 <p>Give a name to the new target platform, Click on (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/></p>
-<p>![eclipse_target_platform_3](./images/eclipse_target_platform_3.png =500x500)</p>
-<p>Figure-03: Eclipse Target Platforms Dependencies.</p>
+<p><img src="./images/eclipse_target_platform_3.png" height="500px" width="500px" /></p>
 <p>Finally, check the new target configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/></p>
-<p>![eclipse_target_platform_4](./images/eclipse_target_platform_4.png =500x500)</p>
-<p>Figure-04: Eclipse Target Platforms.</p>
+<p><img src="./images/eclipse_target_platform_4.png" height="500px" width="500px" /></p>
 <h4 id="import-projects-into-the-eclipse-workspace">Import Projects into the Eclipse Workspace</h4>
 <p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
 <p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
 <a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.</p>
-<p>![m2e-connectors](./images/m2e-connectors.png =500x500)</p>
-<p>Figure-05: Install m2e-connectors plugins.</p>
+<p><img src="./images/m2e-connectors.png" height="500px" width="500px" /></p>
 <h3 id="configure-the-analysis-platform">Configure the Analysis Platform</h3>
 <h4 id="identifieryour-name"><code>identifier=&lt;your name&gt;</code></h4>
 <p>The identifier of the node. If not specified, the platform will attempt to use the node's hostname, and if it cannot resolve the hostname, it will generated a random UUID. </p>
@@ -698,8 +693,7 @@ git checkout dev
 <p>In case that the previous steps doesn't launch your RCP application (mainly due to a runtime missing dependencies), the "Add Required Plug-ins" option allows you to validate (i.e. select only the right amount of plugins you actually need) your runtime configuration.
 To do so, go to <code>Run menu</code> and select <code>Run Configurations...</code>. 
 From the list of the left hand side, select the run configuration for your Eclipse application, then choose <code>Plug-ins</code> tab at the right dialog box. To resolve the runtime dependencies effectively required to run the RCP application, click on <code>Add Required Plug-ins</code> button the <code>Apply</code> to save the changes and re-run your configuration.</p>
-<p>![add-required-plugins](./images/add-required-plugins.png =750x400)</p>
-<p>Figure-06: Add Required Plug-ins configuration.</p>
+<p><img src="./images/add-required-plugins.png" height="500px" width="750px" /></p>
               
             </div>
           </div>
