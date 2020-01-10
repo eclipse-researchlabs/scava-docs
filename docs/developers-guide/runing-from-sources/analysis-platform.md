@@ -154,7 +154,7 @@ When starting the platform, you can pass a configuration file to control the beh
 ./eclipse -worker ${id-worker} -config myconfiguration.properties
 ````
 
-### Workarounds to manage the runtime missing dependencies
+### Workaround to manage the runtime missing dependencies
 
 In case that the previous steps doesn't launch your RCP application (mainly due to a runtime missing dependencies), the "Add Required Plug-ins" option allows you to validate (i.e. select only the right amount of plugins you actually need) your runtime configuration.
 To do so, go to `Run menu` and select `Run Configurations...`. 
