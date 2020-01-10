@@ -158,5 +158,6 @@ In case that the previous steps doesn't launch your RCP application (mainly due 
 To do so, go to `Run menu` and select `Run Configurations...`. 
 From the list of the left hand side, select the run configuration for your Eclipse application, then choose `Plug-ins` tab at the right dialog box. To resolve the runtime dependencies effectively required to run the RCP application, click on `Add Required Plug-ins` button the `Apply` to save the changes and re-run your configuration.
 <br/>
+
 <img src="images/add-required-plugins.png" height="500px" width="750px"><br/>
 Figure-06: Add Required Plug-ins configuration.
