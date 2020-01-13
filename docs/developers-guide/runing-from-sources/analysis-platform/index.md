@@ -67,25 +67,25 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 
 * **Configure the Target Platform**
 
-Open the Eclipse preferences (`Window -> Preferences`), then choose the Target Platform (`Plug-in Development -> Target Platform`).<br/>
+Open the Eclipse preferences `Window` -> `Preferences`, then choose the Target Platform `Plug-in Development` -> `Target Platform`.<br/>
 
 <img src="./images/eclipse_preferences_1.png" height="500px" width="500px" />
 
-Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).<br/>
+Add a new Target Platform configuration for the project, choose the Default initialization then click on `Next`.<br/>
 
 <img src="./images/eclipse_target_platform_2.png" height="500px" width="500px" />
 
-Give a name to the new target platform, Click on (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (`Finish`).<br/>
+Give a name to the new target platform, Click on `Add` button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on `Finish`.<br/>
 
 <img src="./images/eclipse_target_platform_3.png" height="500px" width="500px" />
 
-Finally, check the new target configuration, then click on (`Apply and Close`) to save the changes.<br/>
+Finally, check the new target configuration, then click on `Apply` and `Close` to save the changes.<br/>
 
 <img src="./images/eclipse_target_platform_4.png" height="500px" width="500px" />
 
 #### Import Projects into the Eclipse Workspace
 
-Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
+Open Eclipse and import all projects from the top level directory of the Scava code `File` -> `Import` -> `Maven` -> `Existing Maven Projects`, Select `Next` to get the Import Wizzard. Browse to find the location of the Project. Make sure the Project you want is checked, then hit `Finish` and wait for all the projects to compile without errors.
 
 Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
 [Tycho Plugin](https://www.eclipse.org/tycho/).
