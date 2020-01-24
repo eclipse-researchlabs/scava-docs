@@ -1,5 +1,5 @@
 
-# Running the Administration Application form Sources
+# Running the Administration Application from Sources
 
 ## Prerequisites:
 * Start running the [Metric Platform](./analysis-platform.md#running-the-analysis-platform-form-sources).
@@ -36,9 +36,16 @@ git checkout dev
 ## Run the Administration webapp
 
 The following instructions show how to run the dashboard web app from source:
+
   * Enter the `administration/scava-administration/` directory within the scava repository.
-  * Install Angular dependency using `npm install`
-  * Run the web app on port 4200 using angular-cli: `ng serve`
-  * Navigate to `http://localhost:4200/`
+  * Under the subdirectory `src/assets/config` edit the `externalConfig.json` file and add the configuration as following:
+  ``` API Gateway Configuration
+  {
+    "SERVICE_URL": "${API_GATEWAY_URL}"
+  }
+  ```
+  * Under the directory `administration/scava-administration/`, install the project dependencies using `npm install`.
+  * Run the web app's embedded server using angular-cli: `ng serve`.
+  * Navigate to `http://localhost:4200/`.
 
   

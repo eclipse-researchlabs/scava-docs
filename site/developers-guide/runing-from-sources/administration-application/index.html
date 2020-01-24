@@ -204,7 +204,7 @@
     <a class="current" href="./">Administration application</a>
     <ul class="subnav">
             
-    <li class="toctree-l4"><a href="#running-the-administration-application-form-sources">Running the Administration Application form Sources</a></li>
+    <li class="toctree-l4"><a href="#running-the-administration-application-from-sources">Running the Administration Application from Sources</a></li>
     
         <ul>
         
@@ -581,7 +581,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="running-the-administration-application-form-sources">Running the Administration Application form Sources</h1>
+                <h1 id="running-the-administration-application-from-sources">Running the Administration Application from Sources</h1>
 <h2 id="prerequisites">Prerequisites:</h2>
 <ul>
 <li>Start running the <a href="./analysis-platform.md#running-the-analysis-platform-form-sources">Metric Platform</a>.</li>
@@ -610,11 +610,18 @@ git checkout dev
 </code></pre>
 
 <h2 id="run-the-administration-webapp">Run the Administration webapp</h2>
-<p>The following instructions show how to run the dashboard web app from source:
-  * Enter the <code>administration/scava-administration/</code> directory within the scava repository.
-  * Install Angular dependency using <code>npm install</code>
-  * Run the web app on port 4200 using angular-cli: <code>ng serve</code>
-  * Navigate to <code>http://localhost:4200/</code></p>
+<p>The following instructions show how to run the dashboard web app from source:</p>
+<ul>
+<li>Enter the <code>administration/scava-administration/</code> directory within the scava repository.</li>
+<li>Under the subdirectory <code>src/assets/config</code> edit the <code>externalConfig.json</code> file and add the configuration as following:
+  <code>API Gateway Configuration
+  {
+    "SERVICE_URL": "${API_GATEWAY_URL}"
+  }</code></li>
+<li>Under the directory <code>administration/scava-administration/</code>, install the project dependencies using <code>npm install</code>.</li>
+<li>Run the web app's embedded server using angular-cli: <code>ng serve</code>.</li>
+<li>Navigate to <code>http://localhost:4200/</code>.</li>
+</ul>
               
             </div>
           </div>
