@@ -77,7 +77,9 @@ Both the user and the project manager profiles have the ability to edit its own 
 ![profile-view](./screenshots/profile-view.png)
 
 ### The Workers feature
-The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a free worker.
+The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks.
+
+The `Completed Tasks` section provides the an overview of the tasks which have bee analysed. The `Pending Tasks` presents the analysis tasks waiting for a free worker. The `On Error Tasks` section shows the tasks broken due to an execution error.
 
 ![workers-view](./screenshots/workers-view.png)
 
