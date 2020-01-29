@@ -31,3 +31,6 @@ The SCAVA Contributors guide containes all the material related to the architect
 ---
 
 * [Old Stuf](others/index.md) : Documentation which must be migrated on one of the platfomrs guides
+
+Migrated.
+

@@ -27,6 +27,6 @@ boris@kadath:gh_crossminer_scava-docs$
 ## About Scava
 
 * Eclipse Scava project page: https://projects.eclipse.org/projects/technology.scava
-* Scava official repository for code: https://github.com/crossminer/scava
+* Scava official repository for code: https://github.com/eclipse-researchlabs/scava
 * Scava Official repository for documentation: https://scava-docs.readthedocs.io
 * Licencing for this repository: EPL v2, as described in the [LICENSE.txt](LICENSE.txt)
