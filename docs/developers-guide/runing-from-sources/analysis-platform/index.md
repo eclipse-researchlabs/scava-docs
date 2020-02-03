@@ -1,4 +1,4 @@
-# Running the Analysis Platform form Sources
+# Running the Analysis Platform from Sources
 
 This is a quick start guide to get the SCAVA platform running from source with Eclipse.
 
@@ -6,15 +6,15 @@ This is a quick start guide to get the SCAVA platform running from source with E
 
 ### Install MongoDB
 
-You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
+You can download MongoDB from the [MongoDB website](http://www.mongodb.org/downloads).
 
 ### Install EclipseIDE
 
-Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Mars.2 with plug-in development support (Eclipse IDE for RCP Developers package).
+Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse 2019-06 (4.12.0) with plug-in development support (Eclipse IDE for RCP Developers package).
 
 ## Get the Code
 
-Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository).
+Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
 
 If you are using __Linux / OS X__:
 ````Shell
@@ -37,60 +37,21 @@ git checkout dev
 ## Configuration
 
 ### Configure The Eclipse IDE
-#### Configure the Target Platform
+#### Setup the Target Platform Definition
 
-The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
+We first need to setup the target platform definition of Scava. In Eclipse, import (`File -> Import -> Existing projects into workspace`) the project `metric-platform/releng/org.eclipse.scava.target`. Then, go to `Window -> Preferences -> Plug-in Development -> Target Platform` and check the `scava` target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.
 
-* **Download Eclipse Mars platform**
+<img src="images/target-platform.png" height="500px" width="600px"><br/>
+Figure-01: Setup the Eclipse Target Platform.
 
-Download the complete Eclipse Mars platform.
+#### Import Projects into Eclipse Workspace
 
-In command ligne :
+Import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
 
-````Shell
-./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
-````
+In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
 
-````Shell
-./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
-````
-Then, extract its context somewehere on your machine.
-
-* **Download Rascal dependencies**
-
-Download two external libraries required to run the metric providers based on Rascal.
-
-Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/plugins/)
-
-1.  impulse_0.3.0.xxx.jar
-1.  rascal_eclipse_0.1x.x.xxx.jar
-
-* **Configure the Target Platform**
-
-Open the Eclipse preferences `Window` -> `Preferences`, then choose the Target Platform `Plug-in Development` -> `Target Platform`.<br/>
-
-<img src="./images/eclipse_preferences_1.png" height="500px" width="500px" />
-
-Add a new Target Platform configuration for the project, choose the Default initialization then click on `Next`.<br/>
-
-<img src="./images/eclipse_target_platform_2.png" height="500px" width="500px" />
-
-Give a name to the new target platform, Click on `Add` button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on `Finish`.<br/>
-
-<img src="./images/eclipse_target_platform_3.png" height="500px" width="500px" />
-
-Finally, check the new target configuration, then click on `Apply` and `Close` to save the changes.<br/>
-
-<img src="./images/eclipse_target_platform_4.png" height="500px" width="500px" />
-
-#### Import Projects into the Eclipse Workspace
-
-Open Eclipse and import all projects from the top level directory of the Scava code `File` -> `Import` -> `Maven` -> `Existing Maven Projects`, Select `Next` to get the Import Wizzard. Browse to find the location of the Project. Make sure the Project you want is checked, then hit `Finish` and wait for all the projects to compile without errors.
-
-Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
-[Tycho Plugin](https://www.eclipse.org/tycho/).
-
-<img src="./images/m2e-connectors.png" height="500px" width="500px" />
+<img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
+Figure-02: Install m2e-connectors plugins.
 
 ### Configure the Analysis Platform
 
@@ -136,14 +97,14 @@ sudo service mongod start
 
 ### Validate and Run the Platform
 
-Open `releng/org.eclipse.scava.product/scava.product`
-  * Click the `Validate...` icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
-  * If things do not validate, there's something wrong -- get in touch :) Problems related to `org.eclipse.e4.core.di` aren't critical.
-  * Then, click the `Export an Eclipse product` on the left of the `Validate...` button. Uncheck the `Generate p2 repository` checkbox, select a destination directory and validate. After a while, the SCAVA platform will be generated in the selected directory.
-  * The platform can then be run using the generated `eclipse` binary; it accepts the following arguments:
-    * `-apiServer`: Starts up the client API on localhost:8182
-    * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
-  * To get a full platform running, first launch a worker thread, then the API server.
+* Open `releng/org.eclipse.scava.product/scava.product`.
+* Click the `Validate...` icon in the top right of the product configuration editor (the icon is a piece of paper with a tick).
+* If things do not validate, there's something wrong -- get in touch :) Problems related to `org.eclipse.e4.core.di` aren't critical.
+* Then, click the `Export an Eclipse product` on the left of the `Validate...` button. Uncheck the `Generate p2 repository` checkbox, select a destination directory and validate. After a while, the SCAVA platform will be generated in the selected directory.
+* The platform can then be run using the generated `eclipse` binary; it accepts the following arguments:
+    * `-apiServer`: Starts up the client API on localhost:8182.
+    * `-worker ${id-worker}`: Spawns a thread that analyses registered projects.
+* To get a full platform running, first launch a worker thread, then the API server.
 
 When starting the platform, you can pass a configuration file to control the behaviour of the platform:
 
