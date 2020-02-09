@@ -242,7 +242,7 @@ It’s time to implement the getCityWeatherReader method accessing to the the Op
 
 
 	public class App {
-		static String OpenWeathermapAPI = "http://api.openweathermap.org/data/2.5/weather?q={city}&appid= {appid}";
+		static String OpenWeathermapAPI = "http://api.openweathermap.org/data/2.5/weather?q={city}&appid={appid}";
 		static String AppId = "abbcea2020f75409af198b98de40e3a6";
 	
 		public static void main(String[] args) throws IOException, ParseException {
