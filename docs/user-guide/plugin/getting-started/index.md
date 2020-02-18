@@ -14,7 +14,25 @@ Install the latest version of the CROSSMINER plug-in from the update site:
 # Getting started scenario
 
 A professor requests his students to extract the current weather for a given city from the **OpenWeather** <https://openweathermap.org> open data site. The data provided are in a JSON format. For example, for "Paris, FR"
-<http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=abbcea2020f75409af198b98de40e3a6>.
+<http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=def248d974cabc1a00f5709256ca44c2>.
+
+<table>
+<tr><td bgcolor="lightgrey">
+
+**Warning:** 
+
+The appID provide in this link might be deprecated. If when you test the URL you get the result:<br/>
+{"cod":401, "message": "Invalid API key. Please see http:/openweathermap.org/faq#error401 for more info."}"<br/>
+then follow these steps to obtain a new appID:
+* Go to [https://openweathermap.org/api]
+* Under the API named **Current weather data** click on the **Subscribe** button
+* In the table titled **Current weather and forecasts collection**, under the **Free** column click on the **Get API key and Start** button
+* Follow the **How to start in 3 simple steps** decribed in this page to obtain your own appID
+* Once you get get, replace everywhere in the doc the current appID by your own appID
+
+If you already created an account and need too retrive your appID, connect to the following page <https://home.openweathermap.org/api_keys>
+</td></tr>
+</table>
 
 # Task 0: Import a library
 ## Look for a JSON parser library
@@ -100,6 +118,9 @@ In this case json-simple library can be imported as a Maven dependency.
 - Create a Class with its main method.
 - Add the code instantiating the JSON parser
 
+<table>
+<tr><td bgcolor="lightgrey">
+
 	package openweather.json_simple;
 	
 	import org.json.simple.parser.JSONParser;
@@ -114,6 +135,9 @@ In this case json-simple library can be imported as a Maven dependency.
 		}
 	}
 
+</td></tr>
+</table>
+	
 - Select the whole code and, in the contextual menu, ask for relevant Q&A post recommendations.
 ![Convert to Maven Project](./images/reco-sof.png)
 
@@ -149,6 +173,9 @@ In this case json-simple library can be imported as a Maven dependency.
 
 At this point the code looks like that:
 
+<table>
+<tr><td bgcolor="lightgrey">
+
 	package openweather.json_simple;
 	
 	import java.io.BufferedReader;
@@ -173,6 +200,10 @@ At this point the code looks like that:
 		}
 	}
 
+
+</td></tr>
+</table>
+
 ## Look for JSON API snippet code recommendations
 If we look again for StackOverFlow recommendations to understand how to handle a JSONArray, we don’t get useful post.
 So let's try with another recommender.
@@ -188,6 +219,8 @@ So let's try with another recommender.
 
 - Based on this, we can conclude the parsing of the JSON result by iterating across the JSONArray:
 
+<table>
+<tr><td bgcolor="lightgrey">
 
     // loop array 
     JSONArray array = (JSONArray) jsonObject.get("weather");
@@ -198,7 +231,13 @@ So let's try with another recommender.
             String description = (String)weather.get("description");
             System.out.println(cityName+": "+description);
         }
+</td></tr>
+</table>
+
 Finally, at this point, our code looks like that:
+
+<table>
+<tr><td bgcolor="lightgrey">
 
 	package openweather.json_simple;
 	
@@ -235,11 +274,15 @@ Finally, at this point, our code looks like that:
 			}
 		}
 	}
+</td></tr>
+</table>
 
 ## Access REST API result
 It’s time to implement the getCityWeatherReader method accessing to the the Open Weather REST API.
 - Let’s start with the creation of the REST API URL. Before calling any recommender, the code looks like that:
 
+<table>
+<tr><td bgcolor="lightgrey">
 
 	public class App {
 		static String OpenWeathermapAPI = "http://api.openweathermap.org/data/2.5/weather?q={city}&appid= {appid}";
@@ -253,7 +296,8 @@ It’s time to implement the getCityWeatherReader method accessing to the the Op
 			URL url = new URL(restAPI);
 			// Call the  REST API
 			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-
+</td></tr>
+</table>
 - Select the code for the top of the file to the openConnection call
 
 ![Snippets recommendation](./images/reco-snippet3.png)
@@ -263,6 +307,10 @@ It’s time to implement the getCityWeatherReader method accessing to the the Op
 ![Snippets recommendation](./images/reco-snippet4.png)
 
 Based on this, we can complete our code. Finally the code looks like that:
+
+
+<table>
+<tr><td bgcolor="lightgrey">
 
 	package openweather.json_simple;
 	
@@ -319,6 +367,8 @@ Based on this, we can complete our code. Finally the code looks like that:
 	        }
 		}
 	}
+</td><tr>
+<table>
 
 If we call the application without argument, we obtain:
 
