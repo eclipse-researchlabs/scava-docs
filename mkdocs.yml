@@ -1,4 +1,6 @@
 site_name: Eclipse Scava
-theme: readthedocs
+theme: sphinx_rtd_theme
 docs_dir: docs
 site_dir: site
+
+
