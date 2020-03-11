@@ -4,8 +4,9 @@
 This page is about how to deploy a SCAVA instance on the behalf of Docker.
 
 At the actual stage of the project, there two ways to get started with the docker images:
+
 1. Ready-to-use images are stored on the [Crossminer Docker-hub account](https://hub.docker.com/u/crossminer/).
-1. Build them from the [scava-deployment](https://github.com/eclipse-researchlabs/scava-deployment/) repository. They have to be built from various Dockerfile's and with help of a docker-compose file.
+2. (Recommended) Build them from the [scava-deployment](https://github.com/eclipse-researchlabs/scava-deployment/tree/dev) repository. They have to be built from various Dockerfile's and with help of a docker-compose file.
 
 ## Summary of containers
 

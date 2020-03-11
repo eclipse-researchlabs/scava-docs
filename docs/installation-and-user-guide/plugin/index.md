@@ -16,6 +16,7 @@ A professor requests his students to extract the current weather for a given cit
 The appID provide in this link might be deprecated. If when you test the URL you get the result:<br/>
 {"cod":401, "message": "Invalid API key. Please see http:/openweathermap.org/faq#error401 for more info."}"<br/>
 then follow these steps to obtain a new appID:
+
 * Go to [https://openweathermap.org/api]
 * Under the API named **Current weather data** click on the **Subscribe** button
 * In the table titled **Current weather and forecasts collection**, under the **Free** column click on the **Get API key and Start** button
@@ -359,8 +360,8 @@ Based on this, we can complete our code. Finally the code looks like that:
 	        }
 		}
 	}
-</td><tr>
-<table>
+</td></tr>
+</table>
 
 If we call the application without argument, we obtain:
 
@@ -379,6 +380,7 @@ and Rio?
 	Rio: clear sky
 
 At least we know where we should spend end of fall! ;-)
+
 
 # Task 2: Migrate from an abandoned library to a better-supported one.
 Once the task is done, the teacher asks the student to migrate from JSON-simple to Jackson-core library because the former is better supported and a better performance is guaranteed. 
