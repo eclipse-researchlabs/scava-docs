@@ -3,7 +3,7 @@ The Contributors Guide summarize the material related to the architecture of the
 
 
 ## [Contributors Guidelines](contributors-guidelignes/index.md)
-Guidelines related to the organisation ofthe SCAVA developement process.
+Guidelines related to the organisation of the SCAVA development process.
 
 * [SCAVA Repository Organisation](contributors-guidelignes/scava-repository-organisation.md)
 * [SCAVA Development Process](contributors-guidelignes/scava-developement-process.md)

@@ -14,7 +14,7 @@ Although these instructions may apply to other versions of Eclipse IDE, they wer
 
 ## Get the Code
 
-Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
+Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
 
 If you are using __Linux / OS X__:
 ````Shell

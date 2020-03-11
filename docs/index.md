@@ -24,13 +24,14 @@ The SCAVA Contributors guide containes all the material related to the architect
 ### Useful links:
 
 * Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
-* Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
-* Eclipse Scava deployment repository: [github.com/crossminer/scava-deployment](https://github.com/crossminer/scava-deployment)
-* Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
+* Eclipse Scava code repository: [github.com/eclipse-researchlabs/scava](https://github.com/eclipse-researchlabs/scava)
+* Eclipse Scava deployment repository: [github.com/eclipse-researchlabs/scava-deployment](https://github.com/eclipse-researchlabs/scava-deployment)
+* Eclipse Scava documentation repository: [github.com/eclipse-researchlabs/scava-docs](https://github.com/eclipse-researchlabs/scava-docs)
 
+<!---
 ---
 
 * [Old Stuf](others/index.md) : Documentation which must be migrated on one of the platfomrs guides
 
 Migrated.
-
+-->

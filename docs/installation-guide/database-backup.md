@@ -1,17 +1,17 @@
 #  Platform Data Base Backup And Restoration
 
-The SCAVA Platform use a Mongo database to strore data related to analysed projets (project data, analyse process data and  measurements collected durnig the analysis process). A backup of this data can be  perfroemd using the default Mongo backup service.
+The SCAVA Platform use a Mongo database to store data related to analysed projects (project data, analyse process data and  measurements collected durnig the analysis process). A backup of this data can be  performed using the default Mongo backup service.
 
 
-## SCAVA Paltform Data Model
+## SCAVA Platform Data Model
 
-The SCAVA Data mode is composed of several data bases. Each of this databases must be backuped individualy 
+The SCAVA Data mode is composed of several data bases. Each of this databases must be backuped individually 
 
-| Database        | Descripton   |
+| Database        | Description   |
 | ------------- | -----|
-| scava     | The scava databases containes informations related to Analysed Projects including the list of all repository related to this project  |
-| scava-analysis |  The scava-analysis databases containes informations related to analysis process. For each analysed project, this database containes information related to the defined analysed tasks and information related the execution of this anlaysis tasks |
-| {AnalysedProjectName}| For each analysed project, the SCAVA Platform store the result of the analyse (collected measurements) a is a separate database. The Name of this database is the shortName of the project. The  shortName of a project cab be retrive using the REST API exposed by the platforme ( http:/{platforme url}:{platforme port}/project)|
+| scava     | The scava databases contains information related to Analysed Projects including the list of all repository related to this project  |
+| scava-analysis |  The scava-analysis databases contains information related to analysis process. For each analysed project, this database contains information related to the defined analysed tasks and information related the execution of this anlaysis tasks |
+| {AnalysedProjectName}| For each analysed project, the SCAVA Platform store the result of the analyse (collected measurements) a is a separate database. The Name of this database is the shortName of the project. The  shortName of a project cab be retrive using the REST API exposed by the platform ( http:/{platform url}:{platform port}/project)|
 
 ## Backup Process
 

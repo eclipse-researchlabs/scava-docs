@@ -2,7 +2,7 @@
 # Running the Administration Application from Sources
 
 ## Prerequisites:
-* Start running the [Metric Platform](./analysis-platform.md#running-the-analysis-platform-form-sources).
+* Start running the [Metric Platform](./analysis-platform/index.md#running-the-analysis-platform-form-sources).
 
 ## Development Toolkits
 Scava Administration is a based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI 6.1.4 tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart)).
@@ -14,6 +14,9 @@ sudo npm install @angular/cli@6.1.4
 ## Get the Code
 
 Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
+
+
+
 
 If you are using __Linux / OS X__:
 ````Shell
@@ -37,7 +40,7 @@ git checkout dev
 
 The following instructions show how to run the dashboard web app from source:
 
-  * Enter the `administration/scava-administration/` directory within the scava repository.
+  * Enter the `administration/scava-administration/` directory within the Scava repository.
   * Under the subdirectory `src/assets/config` edit the `externalConfig.json` file and add the configuration as following:
   ``` API Gateway Configuration
   {
