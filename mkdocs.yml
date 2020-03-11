@@ -3,10 +3,8 @@ docs_dir: docs
 site_dir: site
 
 theme:
-    name: mkdocs
+    name: readthedocs
     highlightjs: true
-    hljs_languages:
-        - yaml
 
 nav:
     - 'Home' : index.md
