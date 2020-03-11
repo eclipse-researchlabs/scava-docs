@@ -10,7 +10,7 @@ The SCAVA Installation and User Guide provides instructions on how to install an
 The developers guide is dedicated to who peoples which went to extend the capability of the platform or integrate external tools by the intermediary of the public REST API.
 
 ## [SCAVA Contributors Guide](contributors-guide/index.md)
-The SCAVA Contributors guide containes all the material related to the architecture of the platform which could be useful for projects members and external open sources contributors.
+The SCAVA Contributors guide contains all the material related to the architecture of the platform which could be useful for projects members and external open sources contributors.
 
 
 

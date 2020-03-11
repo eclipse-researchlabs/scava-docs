@@ -1,6 +1,27 @@
 site_name: Eclipse Scava
-theme: sphinx_rtd_theme
 docs_dir: docs
 site_dir: site
+
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+
+nav:
+    - 'Home' : index.md
+    - 'Installation and User Guide' : 'installation-and-user-guide/index.md'
+    - 'Contributor Guide' : 'contributors-guide/index.md'
+    - 'Developers Guide' : 'developers-guide/index.md'
+
+    - 'About' : 'about.md'
+
+markdown_extensions:
+    - toc:
+        permalink: 
+
+plugins:
+    - search
+
 
 
