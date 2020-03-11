@@ -1,6 +1,6 @@
 # How to generate REST API Documentation
 
-[REST API Tutorial files](files/REST_API_tutorial.zip "REST API Tutorial")
+<!--[REST API Tutorial files](files/REST_API_tutorial.zip "REST API Tutorial")-->
 
 ## Install
 First of all, I installed a new copy of Eclipse (Committers), just to make sure I start with a clean install.
