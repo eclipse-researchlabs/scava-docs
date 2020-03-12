@@ -2,7 +2,9 @@
 
 # Eclipse SCAVA
 
-Eclipse SCAVA is an **open-source platform** for automatically **analysing** the source code, bug tracking systems, and communication channels of **open source software projects**. Eclipse SCAVA provides techniques and tools for extracting knowledge from existing open source components and use such knowledge to support the selection and reuse of existing software to develop new systems, and to provide developers with real-time recommendations that are relevant to the current development task. Eclipse SCAVA is the project that has been created out of the EU funded H2020 [CROSSMINER](https://www.crossminer.org) project.
+Eclipse SCAVA is an **open-source platform** for automatically **analysing** the source code, bug tracking systems, and communication channels of **open source software projects**. Eclipse SCAVA provides techniques and tools for extracting knowledge from existing open source components and use such knowledge to support the selection and reuse of existing software to develop new systems, and to provide developers with real-time recommendations that are relevant to the current development task. 
+
+Eclipse SCAVA is a result of the European project CROSSMINER. [CROSSMINER project](https://www.crossminer.org/) receives funding under the European Union's Horizon 2020 Research and Innovation Programme under grant agreement No. 732223. 
 
 As shown below Eclipse SCAVA is conceptually in between the developer and all the different and heterogenous data sources that one needs to interact with when understanding and using existing open source components.
 

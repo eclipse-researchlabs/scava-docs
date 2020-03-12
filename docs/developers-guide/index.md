@@ -18,7 +18,10 @@ The following section provide the key information required to develop a new metr
 Reference Guide of REST API exposed by the main platform components
 
 * [Access to the REST API via the API Gateway](api-reference-guide/api-gateway.md)
-* [Analysis Platform](api-reference-guide/analysis-platform.md) 
-* [Knowledge Base](api-reference-guide/knowledge-base.md) 
+* [Analysis Platform](metric-platform-api/) 
+* [Knowledge Base](api-reference-guide/kb/) 
+
+<!--
 * [Visualisation Dashboard](api-reference-guide/visualisation-dashboard.md) 
 * [Workflow Engine](api-reference-guide/workflow-engine.md)
+-->

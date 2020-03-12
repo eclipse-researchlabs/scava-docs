@@ -12,8 +12,6 @@ nav:
     - 'Contributor Guide' : 'contributors-guide/index.md'
     - 'Developers Guide' : 'developers-guide/index.md'
 
-    - 'About' : 'about.md'
-
 markdown_extensions:
     - toc:
         permalink: 

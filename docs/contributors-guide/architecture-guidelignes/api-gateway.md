@@ -176,5 +176,5 @@ java -jar scava-api-gateway-1.0.0.jar
 
 ## Client Implementation
 
-[How to consume a Scava REST services ?](../users/Consuming-REST-Services) \
-This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.
+[How to consume a Scava REST services ?](../../developers-guide/api-reference-guide/api-gateway.md)
+This guideline is dedicated to clients which would like to use the REST Services. It addresses also authentication issues.
