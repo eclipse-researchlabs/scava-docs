@@ -11,7 +11,7 @@ nav:
     - 'Installation and User Guide' : 'installation-and-user-guide/index.md'
     - 'Contributor Guide' : 'contributors-guide/index.md'
     - 'Developers Guide' : 'developers-guide/index.md'
-
+    - 'Videos and Screencasts' : 'installation-and-user-guide/videos/index.md'
 markdown_extensions:
     - toc:
         permalink: 
