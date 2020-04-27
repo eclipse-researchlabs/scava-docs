@@ -29,7 +29,7 @@ mkdir scava
 cd scava
 git init
 git config core.longpaths true
-git add remote origin https://github.com/eclipse-researchlabs/scava.git
+git remote add origin https://github.com/eclipse-researchlabs/scava.git
 git fetch
 git checkout dev
 ````
